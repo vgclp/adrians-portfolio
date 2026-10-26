@@ -7,7 +7,7 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { staticDeployment } from "./src/lib/static-deployment";
 
-const githubPages = process.env.GITHUB_PAGES === "true";
+const githubPages = process.env['GITHUB_PAGES'] === "true";
 const deployment = staticDeployment(githubPages);
 
 export default defineConfig({
