@@ -5,8 +5,9 @@
 - [x] Update metadata; verify navigation, project details, timeline, clipboard, email destination, GitHub URLs, and 390/768/1069/1280px layouts. Seven tests passed; no browser errors. External email delivery is outside the website.
 
 # GitHub Pages repair
+- [x] Update the Pages base path and route tests for the renamed repository adrians-portfolio.
 - [x] Configure homepage prerendering and a GitHub-Pages-only base path without changing portfolio content.
 - [x] Correct the existing workflow's upload folder and assert the static HTML/assets exist before upload.
 - [x] Audit static-hosting compatibility and verify preview navigation, project details, email and Linux interaction; eleven tests pass and the harness reports build OK.
-- [ ] Verify the generated .output/public/index.html and assets in the GitHub Pages build: waiting on the next GitHub Actions run; the harness does not expose the static artifact locally and manual project builds are unavailable here.
-- [ ] Confirm GitHub synchronization and successful deployment: public GitHub still shows commit 73ee54f791d0 and failed run 40353413884; Git sync is managed by Lovable, not writable from chat.
+- [x] Verify the generated .output/public/index.html and assets in the GitHub Pages build: run 40355112509 succeeded, including static verification, upload and deployment.
+- [ ] Confirm deployment of the renamed base path: the live /adrians-portfolio/ homepage still references /pixel-perfect-replay-8921/ assets; waiting for Git sync and a new Actions run containing the path correction.

@@ -3,7 +3,7 @@ import { staticDeployment } from "@/lib/static-deployment";
 
 describe("Static deployment", () => {
   it("mounts GitHub Pages at the requested repository base", () => {
-    expect(staticDeployment(true).base).toBe("/pixel-perfect-replay-8921/");
+    expect(staticDeployment(true).base).toBe("/adrians-portfolio/");
   });
   it("leaves the Lovable preview at the root", () => {
     expect(staticDeployment(false).base).toBe("/");

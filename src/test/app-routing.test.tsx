@@ -17,14 +17,14 @@ describe("App routing", () => {
   it("matches the homepage below the GitHub Pages repository path", () => {
     const router = createRouter({
       routeTree,
-      basepath: "/pixel-perfect-replay-8921/",
+      basepath: "/adrians-portfolio/",
       context: { queryClient: new QueryClient() },
     });
     const location = router.parseLocation({
-      pathname: "/pixel-perfect-replay-8921/",
+      pathname: "/adrians-portfolio/",
       search: "",
       hash: "",
-      href: "/pixel-perfect-replay-8921/",
+      href: "/adrians-portfolio/",
       state: { __TSR_index: 0 },
     });
     expect(location.pathname).toBe("/");
