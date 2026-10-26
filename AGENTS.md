@@ -12,3 +12,4 @@
 - Keep school/application facts and mail links in the browser-safe portfolio module so dates and contact actions stay consistent.
 - Use existing shadcn buttons with portfolio variants and Radix dialog primitives for accessible controls while retaining the original neon design.
 - Project descriptions must reflect verified public repository contents; do not fetch GitHub during page rendering or invent screenshot assets.
+- Playful elements that dodge the pointer must stay reachable by keyboard: block the dodging only while the element has `:focus-visible`, never on plain focus — a mouse click leaves the element focused forever and would disable it.
