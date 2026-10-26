@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   GraduationCap, Heart, Server, Network, Puzzle, Code2, Sprout,
-  ChevronRight
+  ChevronRight, Send
 } from "lucide-react";
 
 const reasons = [
@@ -75,7 +75,7 @@ export default function Ausbildung() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7 }}
-          className="glass rounded-3xl p-6 md:p-8"
+          className="glass flex flex-col rounded-3xl p-6 md:p-8"
         >
           <div className="mb-6 flex items-center gap-3">
             <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-700 shadow-[0_0_22px_rgba(0,212,255,0.35)]">
@@ -138,6 +138,15 @@ export default function Ausbildung() {
             })}
           </div>
 
+          <div className="mt-auto flex justify-center pt-8">
+            <div className="rounded-2xl border border-cyan-400/25 bg-cyan-400/5 p-5 shadow-[0_0_30px_rgba(0,212,255,0.12)]">
+              <Button asChild variant="portfolio" className="h-auto rounded-xl px-6 py-3">
+                <a href="#kontakt">
+                  <Send className="h-4 w-4" /> Kontakt aufnehmen
+                </a>
+              </Button>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
