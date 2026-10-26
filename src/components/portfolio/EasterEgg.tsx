@@ -132,8 +132,6 @@ export default function EasterEgg() {
           ref={winRef}
           type="button"
           onClick={handleWinClick}
-          onFocus={() => (focusedRef.current = true)}
-          onBlur={() => (focusedRef.current = false)}
           animate={{ x: pos.x, y: pos.y, rotate: tilt }}
           transition={reducedRef.current ? { duration: 0 } : { duration: 0.2, ease: "easeOut" }}
           className="absolute left-0 top-0 h-11 w-32 rounded-xl border border-white/15 bg-white/5 font-semibold text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60"
