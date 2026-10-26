@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   GraduationCap, Heart, Server, Network, Puzzle, Code2, Sprout,
-  ChevronRight, CheckCircle2, Send
+  ChevronRight
 } from "lucide-react";
 
 const reasons = [
@@ -138,15 +138,6 @@ export default function Ausbildung() {
             })}
           </div>
 
-          <div className="mt-6 rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-4">
-            <p className="flex items-start gap-2 text-sm text-slate-300">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" />
-              Ich bringe praktische Erfahrung aus meinen eigenen Linux- und Programmierprojekten mit. In einer Ausbildung möchte ich darauf aufbauen und den IT-Alltag im Betrieb kennenlernen.
-            </p>
-            <Button asChild variant="portfolio" className="mt-4 h-auto rounded-xl px-5 py-2.5"><a href="#kontakt">
-              <Send className="h-4 w-4" /> Jetzt Kontakt aufnehmen
-            </a></Button>
-          </div>
         </motion.div>
       </div>
     </section>
