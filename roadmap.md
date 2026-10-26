@@ -10,4 +10,4 @@
 - [x] Correct the existing workflow's upload folder and assert the static HTML/assets exist before upload.
 - [x] Audit static-hosting compatibility and verify preview navigation, project details, email and Linux interaction; eleven tests pass and the harness reports build OK.
 - [x] Verify the generated .output/public/index.html and assets in the GitHub Pages build: run 40355112509 succeeded, including static verification, upload and deployment.
-- [ ] Confirm deployment of the renamed base path: the live /adrians-portfolio/ homepage still references /pixel-perfect-replay-8921/ assets; waiting for Git sync and a new Actions run containing the path correction.
+- [x] Confirm deployment of the renamed base path: run 40356297681 succeeded; live HTML, CSS, JavaScript and favicon return 200 under /adrians-portfolio/. Browser verified homepage, redirect from the slashless URL and contact navigation without runtime errors.
