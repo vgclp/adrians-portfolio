@@ -5,6 +5,7 @@
 - [x] Update metadata; verify navigation, project details, timeline, clipboard, email destination, GitHub URLs, and 390/768/1069/1280px layouts. Seven tests passed; no browser errors. External email delivery is outside the website.
 
 # GitHub Pages repair
+- [x] Update the Pages base path and route tests for the renamed repository adrians-portfolio.
 - [x] Configure homepage prerendering and a GitHub-Pages-only base path without changing portfolio content.
 - [x] Correct the existing workflow's upload folder and assert the static HTML/assets exist before upload.
 - [x] Audit static-hosting compatibility and verify preview navigation, project details, email and Linux interaction; eleven tests pass and the harness reports build OK.
