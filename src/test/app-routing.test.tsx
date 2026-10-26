@@ -20,6 +20,14 @@ describe("App routing", () => {
       basepath: "/pixel-perfect-replay-8921/",
       context: { queryClient: new QueryClient() },
     });
-    expect(router.matchRoutes("/pixel-perfect-replay-8921/").at(-1)?.routeId).toBe("/");
+    const location = router.parseLocation({
+      pathname: "/pixel-perfect-replay-8921/",
+      search: "",
+      hash: "",
+      href: "/pixel-perfect-replay-8921/",
+      state: { __TSR_index: 0 },
+    });
+    expect(location.pathname).toBe("/");
+    expect(router.matchRoutes(location.pathname).at(-1)?.routeId).toBe("/");
   });
 });
