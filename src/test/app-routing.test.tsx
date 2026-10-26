@@ -14,4 +14,20 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+  it("matches the homepage below the GitHub Pages repository path", () => {
+    const router = createRouter({
+      routeTree,
+      basepath: "/pixel-perfect-replay-8921/",
+      context: { queryClient: new QueryClient() },
+    });
+    const location = router.parseLocation({
+      pathname: "/pixel-perfect-replay-8921/",
+      search: "",
+      hash: "",
+      href: "/pixel-perfect-replay-8921/",
+      state: { __TSR_index: 0 },
+    });
+    expect(location.pathname).toBe("/");
+    expect(router.matchRoutes(location.pathname).at(-1)?.routeId).toBe("/");
+  });
 });
