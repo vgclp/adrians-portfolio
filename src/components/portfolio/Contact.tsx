@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { application, contactMailto } from "@/lib/portfolio";
 import { motion } from "framer-motion";
-import { Mail, Copy, Check, MapPin, FolderGit2 } from "lucide-react";
+import { Mail, MapPin, FolderGit2 } from "lucide-react";
 import { useState } from "react";
 
 const EMAIL = application.email;
