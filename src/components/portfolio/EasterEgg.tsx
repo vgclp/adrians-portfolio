@@ -82,7 +82,6 @@ export default function EasterEgg() {
   }, [hop]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    console.log("MM", JSON.stringify({red: reducedRef.current, foc: focusedRef.current, x: e.clientX, y: e.clientY}));
     if (reducedRef.current || focusedRef.current) return;
     const btn = winRef.current;
     if (!btn) return;
