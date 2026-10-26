@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import EasterEgg from "@/components/portfolio/EasterEgg";
 import { timeline } from "@/lib/portfolio";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -137,6 +138,8 @@ export default function Ausbildung() {
               );
             })}
           </div>
+
+          <EasterEgg />
 
           <div className="mt-auto flex justify-center pt-8">
             <div className="rounded-2xl border border-cyan-400/25 bg-cyan-400/5 p-5 shadow-[0_0_30px_rgba(0,212,255,0.12)]">
