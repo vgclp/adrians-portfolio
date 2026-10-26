@@ -87,7 +87,7 @@ export default function EasterEgg() {
   }, [hop]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (reducedRef.current || focusedRef.current) return;
+    if (reducedRef.current || isKeyboardFocus()) return;
     const btn = winRef.current;
     if (!btn) return;
     const r = btn.getBoundingClientRect();
