@@ -15,7 +15,6 @@ export default function EasterEgg() {
   const [linuxGlow, setLinuxGlow] = useState(false);
 
   const escapesRef = useRef(0);
-  const focusedRef = useRef(false);
   const lastFleeRef = useRef(0);
   const reducedRef = useRef(false);
 
@@ -70,8 +69,14 @@ export default function EasterEgg() {
     setTilt(Math.random() * 24 - 12);
   }, [pos]);
 
+  // Nur Tastatur-Fokus (Tab) hält den Button still; Maus-Klick-Fokus nicht.
+  const isKeyboardFocus = () => {
+    const btn = winRef.current;
+    return !!btn && btn.matches(":focus-visible");
+  };
+
   const flee = useCallback(() => {
-    if (focusedRef.current) return;
+    if (isKeyboardFocus()) return;
     const now = Date.now();
     if (now - lastFleeRef.current < 200) return;
     lastFleeRef.current = now;
