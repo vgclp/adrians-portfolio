@@ -53,24 +53,20 @@ export default function Contact() {
           <a href={application.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-portfolio-link"><FolderGit2 className="h-3.5 w-3.5" /> GitHub-Profil</a>
         </p>
 
-        <div className="relative mx-auto mt-7 flex max-w-md flex-col gap-3 sm:flex-row">
-          <Button asChild variant="portfolio" className="h-auto flex-1 rounded-2xl px-6 py-3.5 font-semibold"><a href={contactMailto}>
+        <div className="relative mx-auto mt-7 flex max-w-md flex-col gap-3">
+          <Button asChild variant="portfolio" className="h-auto w-full rounded-2xl px-6 py-3.5 font-semibold"><a href={contactMailto}>
             <Mail className="h-4 w-4" /> E-Mail schreiben
           </a></Button>
-          <Button onClick={copy} variant="portfolioGhost" className="h-auto rounded-2xl px-6 py-3.5 font-mono text-sm">
-            {copied ? <Check className="h-4 w-4 text-emerald-300" /> : <Copy className="h-4 w-4" />}
-            {copied ? "Kopiert!" : "Kopieren"}
+          <Button
+            variant="portfolioGhost"
+            onClick={copy}
+            className="h-auto w-full whitespace-normal break-all rounded-2xl px-6 py-3 font-mono text-sm"
+            title="Klicken zum Kopieren"
+          >
+            {EMAIL}
           </Button>
         </div>
 
-        <Button
-          variant="portfolioGhost"
-          onClick={copy}
-          className="relative mx-auto mt-4 block h-auto max-w-full whitespace-normal break-all rounded-xl px-5 py-2.5 font-mono text-sm"
-          title="Klicken zum Kopieren"
-        >
-          {EMAIL}
-        </Button>
 
         <p className="relative mt-6 text-sm text-portfolio-body"></p>
         <p role="status" aria-live="polite" className="relative mt-2 min-h-5 text-sm text-portfolio-body">{copyError ? "Kopieren war nicht möglich. Du kannst die E-Mail-Adresse auswählen und kopieren." : copied ? "E-Mail-Adresse kopiert." : ""}</p>
