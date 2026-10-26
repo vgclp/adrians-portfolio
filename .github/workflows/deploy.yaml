@@ -33,7 +33,15 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Website erstellen
-        run: bun run build --base="/${{ github.event.repository.name }}/"
+        env:
+          GITHUB_PAGES: "true"
+        run: bun run build
+
+      - name: Statische Website prüfen
+        run: |
+          bun scripts/verify-static-build.ts
+          touch .output/public/.nojekyll
+          ls -la .output/public
 
       - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v5
@@ -41,7 +49,7 @@ jobs:
       - name: Dateien hochladen
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: ./.output/public
 
       - name: Website veröffentlichen
         id: deployment
