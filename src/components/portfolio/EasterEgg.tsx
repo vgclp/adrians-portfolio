@@ -59,10 +59,11 @@ export default function EasterEgg() {
       const d = Math.hypot(cx - cur.x, cy - cur.y);
       if (d >= 90) candidates.push({ x, y, d });
     }
-    const pick =
-      candidates.length > 0
-        ? candidates[Math.floor(Math.random() * candidates.length)]
-        : { x: Math.random() * Math.max(0, ab.width - bw), y: Math.random() * Math.max(0, ab.height - bh) };
+    const fallback = {
+      x: Math.random() * Math.max(0, ab.width - bw),
+      y: Math.random() * Math.max(0, ab.height - bh),
+    };
+    const pick = candidates.length > 0 ? candidates[Math.floor(Math.random() * candidates.length)] ?? fallback : fallback;
     setPos({ x: pick.x, y: pick.y });
     setTilt(Math.random() * 24 - 12);
   }, [pos]);
