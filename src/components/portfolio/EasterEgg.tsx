@@ -54,8 +54,13 @@ export default function EasterEgg() {
       const y = Math.random() * Math.max(0, ab.height - bh);
       const cx = ab.left + x + bw / 2;
       const cy = ab.top + y + bh / 2;
-      // Linux-Button (mit Puffer) nicht überdecken
-      if (cx > lb.left - 14 && cx < lb.right + 14 && cy > lb.top - 14 && cy < lb.bottom + 14) continue;
+      // Linux-Button nicht überdecken (echte Rechteckprüfung mit Puffer)
+      const overlapsLinux =
+        x < lb.right - ab.left + 8 &&
+        x + bw > lb.left - ab.left - 8 &&
+        y < lb.bottom - ab.top + 8 &&
+        y + bh > lb.top - ab.top - 8;
+      if (overlapsLinux) continue;
       const d = Math.hypot(cx - cur.x, cy - cur.y);
       if (d >= 90) candidates.push({ x, y, d });
     }
