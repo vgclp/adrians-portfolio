@@ -13,7 +13,7 @@ export const timeline = [
   { year: "Heute", title: "Schüler der 10. Klasse", text: "Ich bin 16 Jahre alt und beschäftige mich in meiner Freizeit mit Linux, Betriebssystemen und eigenen Programmierprojekten." },
   { year: "Nach Vereinbarung", title: "Offen für ein Praktikum", text: "Neben der Suche nach einem Ausbildungsplatz würde ich gerne bei einem Praktikum den Arbeitsalltag im IT-Bereich kennenlernen." },
   { year: `Sommer ${application.graduation.year}`, title: "Voraussichtlicher Realschulabschluss", text: "Ich gehe in die 10. Klasse und strebe meinen Realschulabschluss im Sommer 2027 an." },
-  { year: `Sommer / Herbst ${application.apprenticeship.year}`, title: "Gewünschter Ausbildungsbeginn", text: "Ich suche eine IT-Ausbildung. Verschiedene IT-Ausbildungsrichtungen interessieren mich." },
+  { year: `Sommer / Herbst ${application.apprenticeship.year}`, title: "Gewünschter Ausbildungsbeginn", text: "Ich suche eine IT-Ausbildung." },
 ];
 
 export const contactMailto = `mailto:${application.email}?subject=${encodeURIComponent("IT-Ausbildung ab 2027 / Praktikum nach Vereinbarung")}`;

@@ -132,13 +132,13 @@ IT-Ausbildung ab 2027 gesucht
             <div className="neon-line mx-auto mt-6 w-48" />
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-5">
+          <div className="mx-auto max-w-3xl">
             <motion.div
-              initial={{ opacity: 0, x: -36 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, ease }}
-              className="glass-strong relative overflow-hidden rounded-3xl p-7 md:p-9 lg:col-span-3"
+              className="glass-strong relative overflow-hidden rounded-3xl p-7 md:p-9"
             >
               <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-cyan-500/20 blur-[70px]" />
               <div className="mb-5 flex items-center gap-3">
