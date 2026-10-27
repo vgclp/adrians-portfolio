@@ -109,7 +109,7 @@ export default function EasterEgg() {
       <h4 className="mt-2 text-center text-xl font-bold">
         Linux oder <span className="neon-text">Windows?</span>
       </h4>
-      <p className="mt-1 text-center text-sm text-slate-400">Probiere es aus …</p>
+      <p className="mt-1 text-center text-sm text-slate-400">Probieren Sie gerne aus …</p>
 
       {/* Arena: nur die zwei Buttons, damit Windows nichts überdecken kann */}
       <div

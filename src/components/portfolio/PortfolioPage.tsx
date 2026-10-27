@@ -152,7 +152,7 @@ IT-Ausbildung ab 2027 gesucht
               </div>
               <div className="space-y-4 leading-relaxed text-slate-300">
                 <p>
-                  Zur Zeit gehe ich in die 10. Klasse und möchte nach meinem voraussichtlichen Realschulabschluss im Sommer 2027 eine Ausbildung im IT-Bereich beginnen.
+                  Zurzeit gehe ich in die 10. Klasse und möchte nach meinem voraussichtlichen Realschulabschluss im Sommer 2027 eine Ausbildung im IT-Bereich beginnen.
                 </p>
                 <p className="text-slate-400">
                   In meiner Freizeit beschäftige ich mich viel mit Linux, installiere und teste verschiedene Betriebssysteme und programmiere eigene Tools und Skripte. Besonders interessant finde ich es, herauszufinden, wie Systeme funktionieren und wie man Probleme selbst lösen kann.
